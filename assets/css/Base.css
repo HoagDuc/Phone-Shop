@@ -1,0 +1,46 @@
+:root {
+  --while-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid__full-width {
+  width: 100%;
+}
+
+.grid__row {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .grid__row {
+    flex-direction: row;
+  }
+  .grid__column-2-5 {
+    padding: 0 5px;
+    width: 40%;
+  }
+
+  .grid__column-2-4 {
+    padding: 0 5px;
+    width: 20%;
+  }
+}
