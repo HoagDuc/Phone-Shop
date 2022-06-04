@@ -85,30 +85,40 @@
         <div class="form-container">
           <form action="register-form" class="register-form" method="post">
             <center>
-              <h3><b>Đăng Nhập</b></h3>
+              <h3><b>Đăng Ký</b></h3>
             </center>
             <div class="form-row">
               <label for="inputEmail3" class="form-label">Tài khoản:</label><br />
-              <input type="email" class="form-input" id="txtEmail" placeholder="Email" name="txtEmail" />
+              <input type="email" class="form-input" id="txtEmail" placeholder="Email" name="txtEmail" runat="server" />
             </div>
             <div class="form-row">
               <label for="inputPassword3" class="form-label">Mật khẩu:</label><br />
-              <input type="password" class="form-input" id="txtPass" placeholder="Password" name="txtPass" />
+              <input
+                type="password"
+                class="form-input"
+                id="txtPass"
+                placeholder="Password"
+                name="txtPass"
+                runat="server"
+              />
             </div>
-            <p runat="server" id="error" style="color: red"></p>
+            <div class="form-row">
+              <label for="inputPasswordR" class="form-label">Nhập lại mật khẩu:</label><br />
+              <input type="password" class="form-input" id="inputPasswordR" placeholder="Re Password" />
+            </div>
+            <div class="form-row">
+              <label for="gen" class="form-label">Giới tính:</label>
+              <div class="col-sm-6 row">
+                <input type="radio" name="gen" value="Nam" runat="server" />Nam
+                <input type="radio" name="gen" value="Nu" runat="server" />Nữ
+              </div>
+            </div>
+            <p runat="server" id="btn_error" style="color: red"></p>
             <br />
             <center>
-              <button type="submit" class="btn btn-success" value="true" name="btnLogin" id="btnLogin">
-                Đăng Nhập
-              </button>
+              <input type="submit" class="btn btn-success" value="true" name="btnLogin" id="btnLogin" runat="server" />
             </center>
             <br />
-            <center>
-              <label><a href="#">Quên mật khẩu ?</a></label>
-            </center>
-            <center>
-              <label class="form-label">Chưa có tài khoản đăng ký tại<a href="Register.html"> đây !</a></label>
-            </center>
           </form>
         </div>
       </main>
